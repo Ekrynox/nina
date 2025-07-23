@@ -3070,7 +3070,10 @@ namespace Nikon
     public enum eNkMAIDLiveViewStatus : int
     {
         kNkMAIDLiveViewStatus_OFF = 0,
-        kNkMAIDLiveViewStatus_ON = 1
+        kNkMAIDLiveViewStatus_ON = 1,
+        kNkMAIDLiveViewStatus_ON_Menu = 2,
+        kNkMAIDLiveViewStatus_ON_RemoteLV = 3,
+        kNkMAIDLiveViewStatus_ON_CameraLV = 4
     }
 
     public enum eNkMAIDMatrixMetering : int
