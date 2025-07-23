@@ -1279,14 +1279,21 @@ namespace Nikon {
         public bool LiveViewEnabled {
             set {
                 uint liveviewcode = 1U;
-
                 switch (ModuleType) {
                     case NikonModuleType.Type0029:
                         liveviewcode = 3U;
                         break;
                 }
-
                 SetUnsigned(eNkMAIDCapability.kNkMAIDCapability_LiveViewStatus, value ? liveviewcode : 0U);
+
+                // Timeout for liveview on newer cameras (viewcode == 3U)
+                if (value && liveviewcode == 3U) {
+                    Stopwatch sw = new Stopwatch();
+                    sw.Start();
+                    while (GetEnum(eNkMAIDCapability.kNkMAIDCapability_LiveViewImageStatus).Index != (int)eNkMAIDLiveViewImageStatus.kNkMAIDLiveViewImageStatus_CanAcquire) {
+                        if (sw.ElapsedMilliseconds > 5000) throw new TimeoutException("Liveview have not been able to be started after timeout");
+                    }
+                }
             }
 
             get {

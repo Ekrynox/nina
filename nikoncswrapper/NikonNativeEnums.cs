@@ -962,7 +962,8 @@ namespace Nikon
         kNkMAIDCapability_MirrorUpReleaseShootingCount = 34033,      // kNkMAIDCapability_VendorBaseDX2 + 0x3f2 <--> + 0x3f3 are reserved.
         kNkMAIDCapability_MovieActive_D_Lighting = 34034,
         kNkMAIDCapability_FlickerReductionSetting = 34035,
-        kNkMAIDCapability_ExposureCompFlashUsed = 34036
+        kNkMAIDCapability_ExposureCompFlashUsed = 34036,
+        kNkMAIDCapability_LiveViewImageStatus = 34071,
     }
 
     public enum eNkMAIDCapAreaCrop : int
@@ -4249,6 +4250,12 @@ namespace Nikon
         kNkWBFluorescentType_DayWhite = 4,
         kNkWBFluorescentType_Daylight = 5,
         kNkWBFluorescentType_HiTempMercuryVapor = 6
+    }
+
+    public enum eNkMAIDLiveViewImageStatus : int
+    {
+        kNkMAIDLiveViewImageStatus_CannotAcquire = 0,
+        kNkMAIDLiveViewImageStatus_CanAcquire = 1
     }
 }
 
