@@ -1280,7 +1280,15 @@ namespace Nikon {
             set {
                 uint liveviewcode = 1U;
                 switch (ModuleType) {
+                    case NikonModuleType.Type0023:
+                    case NikonModuleType.Type0024:
+                    case NikonModuleType.Type0025:
+                    case NikonModuleType.Type0026:
+                    case NikonModuleType.Type0027:
+                    case NikonModuleType.Type0028:
                     case NikonModuleType.Type0029:
+                    case NikonModuleType.Type0030:
+                    case NikonModuleType.Type0031:
                         liveviewcode = 3U;
                         break;
                 }
@@ -1321,8 +1329,19 @@ namespace Nikon {
                     headerSize = 128;
                     break;
 
+                case NikonModuleType.Type0023:
+                case NikonModuleType.Type0024:
+                case NikonModuleType.Type0025:
+                case NikonModuleType.Type0026:
+                case NikonModuleType.Type0027:
+                case NikonModuleType.Type0028:
                 case NikonModuleType.Type0029:
                     headerSize = 512;
+                    break;
+
+                case NikonModuleType.Type0030:
+                case NikonModuleType.Type0031:
+                    headerSize = 1024;
                     break;
 
                 default:
