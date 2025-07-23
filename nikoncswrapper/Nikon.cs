@@ -1277,8 +1277,26 @@ namespace Nikon {
         }
 
         public bool LiveViewEnabled {
-            set { SetUnsigned(eNkMAIDCapability.kNkMAIDCapability_LiveViewStatus, value ? 1U : 0U); }
-            get { return GetUnsigned(eNkMAIDCapability.kNkMAIDCapability_LiveViewStatus) == 0 ? false : true; }
+            set {
+                uint liveviewcode = 1U;
+
+                switch (ModuleType) {
+                    case NikonModuleType.Type0029:
+                        liveviewcode = 3U;
+                        break;
+                }
+
+                SetUnsigned(eNkMAIDCapability.kNkMAIDCapability_LiveViewStatus, value ? liveviewcode : 0U);
+            }
+
+            get {
+                uint liveviewcode = GetUnsigned(eNkMAIDCapability.kNkMAIDCapability_LiveViewStatus);
+                if (liveviewcode == 1U || liveviewcode == 3U) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
         }
 
         public NikonLiveViewImage GetLiveViewImage() {
@@ -1294,6 +1312,10 @@ namespace Nikon {
 
                 case NikonModuleType.Type0003:
                     headerSize = 128;
+                    break;
+
+                case NikonModuleType.Type0029:
+                    headerSize = 512;
                     break;
 
                 default:
