@@ -331,9 +331,13 @@ namespace NINA.Equipment.Equipment.MyCamera {
 
         public int CameraXSize {
             get {
-                try {
-                    return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).ResX;
-                } catch {
+                if (Connected) {
+                    try {
+                        return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).ResX;
+                    } catch {
+                        return -1;
+                    }
+                } else {
                     return -1;
                 }
             }
@@ -341,9 +345,13 @@ namespace NINA.Equipment.Equipment.MyCamera {
 
         public int CameraYSize {
             get {
-                try {
-                    return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).ResY;
-                } catch {
+                if (Connected) {
+                    try {
+                        return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).ResY;
+                    } catch {
+                        return -1;
+                    }
+                } else {
                     return -1;
                 }
             }
@@ -361,9 +369,13 @@ namespace NINA.Equipment.Equipment.MyCamera {
 
         public double PixelSizeX {
             get {
-                try {
-                    return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).PixelSizeX;
-                } catch {
+                if (Connected) {
+                    try {
+                        return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).PixelSizeX;
+                    } catch {
+                        return double.NaN;
+                    }
+                } else {
                     return double.NaN;
                 }
             }
@@ -371,9 +383,13 @@ namespace NINA.Equipment.Equipment.MyCamera {
 
         public double PixelSizeY {
             get {
-                try {
-                    return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).PixelSizeY;
-                } catch {
+                if (Connected) {
+                    try {
+                        return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).PixelSizeY;
+                    } catch {
+                        return double.NaN;
+                    }
+                } else {
                     return double.NaN;
                 }
             }
@@ -580,10 +596,14 @@ namespace NINA.Equipment.Equipment.MyCamera {
 
         public int BatteryLevel {
             get {
-                try {
-                    return _camera.GetInteger(eNkMAIDCapability.kNkMAIDCapability_BatteryLevel);
-                } catch (NikonException ex) {
-                    Logger.Error(ex);
+                if (Connected) {
+                    try {
+                        return _camera.GetInteger(eNkMAIDCapability.kNkMAIDCapability_BatteryLevel);
+                    } catch (NikonException ex) {
+                        Logger.Error(ex);
+                        return -1;
+                    }
+                } else {
                     return -1;
                 }
             }
