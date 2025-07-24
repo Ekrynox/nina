@@ -1278,20 +1278,7 @@ namespace Nikon {
 
         public bool LiveViewEnabled {
             set {
-                uint liveviewcode = 1U;
-                switch (ModuleType) {
-                    case NikonModuleType.Type0023:
-                    case NikonModuleType.Type0024:
-                    case NikonModuleType.Type0025:
-                    case NikonModuleType.Type0026:
-                    case NikonModuleType.Type0027:
-                    case NikonModuleType.Type0028:
-                    case NikonModuleType.Type0029:
-                    case NikonModuleType.Type0030:
-                    case NikonModuleType.Type0031:
-                        liveviewcode = 3U;
-                        break;
-                }
+                uint liveviewcode = NikonCameraDatabase.GetLiveViewConfig(Name).OnStatus;
                 SetUnsigned(eNkMAIDCapability.kNkMAIDCapability_LiveViewStatus, value ? liveviewcode : 0U);
 
                 // Timeout for liveview on newer cameras (viewcode == 3U)
@@ -1316,38 +1303,7 @@ namespace Nikon {
 
         public NikonLiveViewImage GetLiveViewImage() {
             NikonArray a = GetArray(eNkMAIDCapability.kNkMAIDCapability_GetLiveViewImage);
-
-            int headerSize = 0;
-
-            switch (ModuleType) {
-                case NikonModuleType.Type0001:
-                case NikonModuleType.Type0002:
-                    headerSize = 64;
-                    break;
-
-                case NikonModuleType.Type0003:
-                    headerSize = 128;
-                    break;
-
-                case NikonModuleType.Type0023:
-                case NikonModuleType.Type0024:
-                case NikonModuleType.Type0025:
-                case NikonModuleType.Type0026:
-                case NikonModuleType.Type0027:
-                case NikonModuleType.Type0028:
-                case NikonModuleType.Type0029:
-                    headerSize = 512;
-                    break;
-
-                case NikonModuleType.Type0030:
-                case NikonModuleType.Type0031:
-                    headerSize = 1024;
-                    break;
-
-                default:
-                    headerSize = 384;
-                    break;
-            }
+            int headerSize = NikonCameraDatabase.GetLiveViewConfig(Name).ImageHeaderSize; ;
 
             return new NikonLiveViewImage(a.Buffer, headerSize);
         }
