@@ -329,9 +329,25 @@ namespace NINA.Equipment.Equipment.MyCamera {
 
         public short BayerOffsetY => 0;
 
-        public int CameraXSize => -1;
+        public int CameraXSize {
+            get {
+                try {
+                    return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).ResX;
+                } catch {
+                    return -1;
+                }
+            }
+        }
 
-        public int CameraYSize => -1;
+        public int CameraYSize {
+            get {
+                try {
+                    return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).ResY;
+                } catch {
+                    return -1;
+                }
+            }
+        }
 
         public double ExposureMin => 0;
 
@@ -343,9 +359,25 @@ namespace NINA.Equipment.Equipment.MyCamera {
 
         public short MaxBinY => 1;
 
-        public double PixelSizeX => double.NaN;
+        public double PixelSizeX {
+            get {
+                try {
+                    return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).PixelSizeX;
+                } catch {
+                    return double.NaN;
+                }
+            }
+        }
 
-        public double PixelSizeY => double.NaN;
+        public double PixelSizeY {
+            get {
+                try {
+                    return Nikon.NikonCameraDatabase.GetSensorSpecs(_camera.Name).PixelSizeY;
+                } catch {
+                    return double.NaN;
+                }
+            }
+        }
 
         public bool CanSetTemperature => false;
 

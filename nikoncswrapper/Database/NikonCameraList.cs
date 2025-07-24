@@ -14,8 +14,8 @@ namespace Nikon {
             public double SizeX { get; set; }
             public double SizeY { get; set; }
 
-            public double PitchX { get; set; }
-            public double PitchY { get; set; }
+            public double PixelSizeX { get; set; }
+            public double PixelSizeY { get; set; }
         }
 
         public class LiveViewConfig {
@@ -31,7 +31,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 4256, ResY = 2832,
                     SizeX = 36.0, SizeY = 23.9,
-                    PitchX = 8.43, PitchY = 8.43
+                    PixelSizeX = 8.43, PixelSizeY = 8.43
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -43,7 +43,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 4288, ResY = 2848,
                     SizeX = 23.6, SizeY = 15.8,
-                    PitchX = 5.53, PitchY = 5.53
+                    PixelSizeX = 5.53, PixelSizeY = 5.53
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -55,7 +55,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 4288, ResY = 2848,
                     SizeX = 23.6, SizeY = 15.8,
-                    PitchX = 5.53, PitchY = 5.53
+                    PixelSizeX = 5.53, PixelSizeY = 5.53
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -67,7 +67,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 4256, ResY = 2832,
                     SizeX = 36.0, SizeY = 23.9,
-                    PitchX = 8.43, PitchY = 8.43
+                    PixelSizeX = 8.43, PixelSizeY = 8.43
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -79,7 +79,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6048, ResY = 4032,
                     SizeX = 35.9, SizeY = 24.0,
-                    PitchX = 5.94, PitchY = 5.94
+                    PixelSizeX = 5.94, PixelSizeY = 5.94
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -91,7 +91,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 4288, ResY = 2848,
                     SizeX = 23.6, SizeY = 15.8,
-                    PitchX = 5.53, PitchY = 5.53
+                    PixelSizeX = 5.53, PixelSizeY = 5.53
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -103,7 +103,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 4288, ResY = 2848,
                     SizeX = 23.6, SizeY = 15.8,
-                    PitchX = 5.53, PitchY = 5.53
+                    PixelSizeX = 5.53, PixelSizeY = 5.53
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -115,7 +115,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 4928, ResY = 3264,
                     SizeX = 23.6, SizeY = 15.7,
-                    PitchX = 4.80, PitchY = 4.80
+                    PixelSizeX = 4.80, PixelSizeY = 4.80
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -127,7 +127,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 4928, ResY = 3264,
                     SizeX = 23.6, SizeY = 15.7,
-                    PitchX = 4.80, PitchY = 4.80
+                    PixelSizeX = 4.80, PixelSizeY = 4.80
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -139,7 +139,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 7360, ResY = 4912,
                     SizeX = 35.9, SizeY = 24.0,
-                    PitchX = 4.88, PitchY = 4.88
+                    PixelSizeX = 4.88, PixelSizeY = 4.88
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -151,7 +151,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 4928, ResY = 3280,
                     SizeX = 36.0, SizeY = 23.9,
-                    PitchX = 7.29, PitchY = 7.29
+                    PixelSizeX = 7.29, PixelSizeY = 7.29
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -163,7 +163,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6016, ResY = 4016,
                     SizeX = 35.9, SizeY = 24.0,
-                    PitchX = 5.97, PitchY = 5.97
+                    PixelSizeX = 5.97, PixelSizeY = 5.97
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -175,7 +175,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6016, ResY = 4016,
                     SizeX = 35.9, SizeY = 24.0,
-                    PitchX = 5.97, PitchY = 5.97
+                    PixelSizeX = 5.97, PixelSizeY = 5.97
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -187,7 +187,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6000, ResY = 4000,
                     SizeX = 23.5, SizeY = 15.6,
-                    PitchX = 3.91, PitchY = 3.91
+                    PixelSizeX = 3.91, PixelSizeY = 3.91
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -199,7 +199,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6000, ResY = 4000,
                     SizeX = 23.5, SizeY = 15.6,
-                    PitchX = 3.91, PitchY = 3.91
+                    PixelSizeX = 3.91, PixelSizeY = 3.91
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -211,7 +211,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6000, ResY = 4000,
                     SizeX = 23.5, SizeY = 15.6,
-                    PitchX = 3.91, PitchY = 3.91
+                    PixelSizeX = 3.91, PixelSizeY = 3.91
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -223,7 +223,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 4928, ResY = 3280,
                     SizeX = 36.0, SizeY = 23.9,
-                    PitchX = 7.29, PitchY = 7.29
+                    PixelSizeX = 7.29, PixelSizeY = 7.29
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -235,7 +235,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 4928, ResY = 3280,
                     SizeX = 36.0, SizeY = 23.9,
-                    PitchX = 7.29, PitchY = 7.29
+                    PixelSizeX = 7.29, PixelSizeY = 7.29
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -247,7 +247,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 7360, ResY = 4912,
                     SizeX = 35.9, SizeY = 24.0,
-                    PitchX = 4.88, PitchY = 4.88
+                    PixelSizeX = 4.88, PixelSizeY = 4.88
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -259,7 +259,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 7360, ResY = 4912,
                     SizeX = 35.9, SizeY = 24.0,
-                    PitchX = 4.88, PitchY = 4.88
+                    PixelSizeX = 4.88, PixelSizeY = 4.88
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -271,7 +271,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6016, ResY = 4016,
                     SizeX = 35.9, SizeY = 24.0,
-                    PitchX = 5.97, PitchY = 5.97
+                    PixelSizeX = 5.97, PixelSizeY = 5.97
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -283,7 +283,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6000, ResY = 4000,
                     SizeX = 23.5, SizeY = 15.6,
-                    PitchX = 3.91, PitchY = 3.91
+                    PixelSizeX = 3.91, PixelSizeY = 3.91
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -295,7 +295,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6000, ResY = 4000,
                     SizeX = 23.5, SizeY = 15.6,
-                    PitchX = 3.91, PitchY = 3.91
+                    PixelSizeX = 3.91, PixelSizeY = 3.91
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -307,7 +307,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6000, ResY = 4000,
                     SizeX = 23.5, SizeY = 15.6,
-                    PitchX = 3.91, PitchY = 3.91
+                    PixelSizeX = 3.91, PixelSizeY = 3.91
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -319,7 +319,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6000, ResY = 4000,
                     SizeX = 23.5, SizeY = 15.6,
-                    PitchX = 3.91, PitchY = 3.91
+                    PixelSizeX = 3.91, PixelSizeY = 3.91
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -331,7 +331,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 5588, ResY = 3712,
                     SizeX = 35.9, SizeY = 23.9,
-                    PitchX = 6.44, PitchY = 6.44
+                    PixelSizeX = 6.44, PixelSizeY = 6.44
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -343,7 +343,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 5588, ResY = 3712,
                     SizeX = 35.9, SizeY = 23.9,
-                    PitchX = 6.44, PitchY = 6.44
+                    PixelSizeX = 6.44, PixelSizeY = 6.44
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -355,7 +355,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 5568, ResY = 3712,
                     SizeX = 23.5, SizeY = 15.7,
-                    PitchX = 4.22, PitchY = 4.22
+                    PixelSizeX = 4.22, PixelSizeY = 4.22
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -367,7 +367,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 5568, ResY = 3712,
                     SizeX = 23.5, SizeY = 15.7,
-                    PitchX = 4.22, PitchY = 4.22
+                    PixelSizeX = 4.22, PixelSizeY = 4.22
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -379,7 +379,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 8256, ResY = 5504,
                     SizeX = 35.9, SizeY = 23.9,
-                    PitchX = 4.35, PitchY = 4.35
+                    PixelSizeX = 4.35, PixelSizeY = 4.35
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 1U,
@@ -391,7 +391,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 8256, ResY = 5504,
                     SizeX = 35.9, SizeY = 23.9,
-                    PitchX = 4.35, PitchY = 4.35
+                    PixelSizeX = 4.35, PixelSizeY = 4.35
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 3U,
@@ -403,7 +403,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6048, ResY = 4024,
                     SizeX = 35.9, SizeY = 23.9,
-                    PitchX = 5.94, PitchY = 5.94
+                    PixelSizeX = 5.94, PixelSizeY = 5.94
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 3U,
@@ -415,7 +415,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 5568, ResY = 3712,
                     SizeX = 23.5, SizeY = 15.7,
-                    PitchX = 4.22, PitchY = 4.22
+                    PixelSizeX = 4.22, PixelSizeY = 4.22
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 3U,
@@ -427,7 +427,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6048, ResY = 4024,
                     SizeX = 35.9, SizeY = 23.9,
-                    PitchX = 5.92, PitchY = 5.92
+                    PixelSizeX = 5.92, PixelSizeY = 5.92
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 3U,
@@ -439,7 +439,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 5568, ResY = 3712,
                     SizeX = 35.9, SizeY = 23.9,
-                    PitchX = 6.44, PitchY = 6.44
+                    PixelSizeX = 6.44, PixelSizeY = 6.44
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 3U,
@@ -451,7 +451,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6016, ResY = 4016,
                     SizeX = 35.9, SizeY = 23.9,
-                    PitchX = 5.95, PitchY = 5.95
+                    PixelSizeX = 5.95, PixelSizeY = 5.95
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 3U,
@@ -463,7 +463,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 8256, ResY = 5504,
                     SizeX = 35.9, SizeY = 23.9,
-                    PitchX = 4.35, PitchY = 4.35
+                    PixelSizeX = 4.35, PixelSizeY = 4.35
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 3U,
@@ -475,7 +475,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 6048, ResY = 4024,
                     SizeX = 35.9,  SizeY = 23.9,
-                    PitchX = 5.94,  PitchY = 5.94
+                    PixelSizeX = 5.94,  PixelSizeY = 5.94
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 3U,
@@ -487,7 +487,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 8256, ResY = 5504,
                     SizeX = 35.9, SizeY = 23.9,
-                    PitchX = 4.35, PitchY = 4.35
+                    PixelSizeX = 4.35, PixelSizeY = 4.35
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 3U,
@@ -499,7 +499,7 @@ namespace Nikon {
                 Sensor = new NikonCameraModel.SensorSpecs {
                     ResX = 8256, ResY = 5504,
                     SizeX = 35.9, SizeY = 23.9,
-                    PitchX = 4.35, PitchY = 4.35
+                    PixelSizeX = 4.35, PixelSizeY = 4.35
                 },
                 LiveView = new NikonCameraModel.LiveViewConfig {
                     OnStatus = 3U,
@@ -515,6 +515,14 @@ namespace Nikon {
             }
 
             return model;
+        }
+        public static NikonCameraModel.SensorSpecs GetSensorSpecs(String key) {
+            NikonCameraModel model = GetCameraModel(key);
+            if (model.LiveView == null) {
+                throw new InvalidOperationException($"Camera model '{key}' does not have his sensor specification configured.");
+            }
+
+            return model.Sensor;
         }
         public static NikonCameraModel.LiveViewConfig GetLiveViewConfig(String key) {
             NikonCameraModel model = GetCameraModel(key);
